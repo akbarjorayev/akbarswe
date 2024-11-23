@@ -1,0 +1,23 @@
+:root {
+  --bg-color: #ffffff;
+}
+
+:root {
+  --selection-bg: #00000033;
+}
+
+:root {
+  --text-color: #111111;
+  --text-opa-color: #00000080;
+}
+
+:root {
+  --btn-hover-bg-color: #d9dbf3;
+  --btn-border-color: #2e2a8c;
+  --btn-active-border-color: #2545c5;
+  --btn-active-bg-color: #c0bef1;
+}
+
+:root {
+  --main-text-color: #2e2eb2;
+}

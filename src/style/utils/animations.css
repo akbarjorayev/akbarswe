@@ -1,0 +1,23 @@
+@keyframes scaleTo1 {
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes opaTo1 {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes filterBlurTo0 {
+  to {
+    filter: blur(0);
+  }
+}
+
+@keyframes translateYTo0 {
+  to {
+    transform: translateY(0);
+  }
+}

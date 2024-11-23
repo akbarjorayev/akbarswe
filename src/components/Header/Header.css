@@ -1,0 +1,25 @@
+@import url('../../style/utils/link.css');
+@import url('../../style/utils/list.css');
+@import url('../../style/utils/display.css');
+
+.header {
+  height: 80px;
+}
+
+.header_content {
+  width: 100%;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.header_links > * {
+  color: var(--text-opa-color);
+
+  &:hover {
+    color: var(--text-color);
+  }
+}

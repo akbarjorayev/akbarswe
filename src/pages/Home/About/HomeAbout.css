@@ -1,0 +1,73 @@
+@import url('../../../style/utils/animations.css');
+
+.home_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.home_about_info {
+  display: flex;
+}
+
+.home_about_img {
+  height: 130px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-right: 20px;
+  scale: 0.7;
+  opacity: 0;
+  filter: blur(10px);
+  animation: scaleTo1 0.5s ease forwards, opaTo1 0.5s ease forwards,
+    filterBlurTo0 0.5s ease forwards;
+}
+
+.home_about_info_text {
+  opacity: 0;
+  animation: opaTo1 1.5s ease forwards;
+}
+
+.home_about_name {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.home_about_title {
+  font-size: 1.7em;
+  color: var(--text-opa-color);
+}
+
+.home_about_desc {
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: opaTo1 0.5s 0.5s ease forwards,
+    translateYTo0 0.5s 0.5s ease forwards;
+}
+
+.home_about_icons img {
+  height: 25px;
+  aspect-ratio: 1;
+}
+
+.home_about_about_btn {
+  color: var(--main-text-color);
+  opacity: 0;
+  transform: translateY(50%);
+  animation: opaTo1 0.8s 0.5s ease forwards,
+    translateYTo0 0.8s 0.5s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .home_about_info {
+    flex-direction: column;
+  }
+
+  .home_about_img {
+    width: 100px;
+    height: 100px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

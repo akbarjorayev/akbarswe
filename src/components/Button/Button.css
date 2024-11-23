@@ -1,0 +1,17 @@
+button {
+  background-color: inherit;
+  border: 1px solid var(--btn-border-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--btn-hover-bg-color);
+}
+
+button:active {
+  background-color: var(--btn-active-bg-color);
+  border-color: var(--btn-active-border-color);
+}
