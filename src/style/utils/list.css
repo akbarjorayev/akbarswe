@@ -1,0 +1,20 @@
+.list_y {
+  display: flex;
+  flex-direction: column;
+}
+
+.list_y > *:not(:last-child) {
+  margin-bottom: var(--mar);
+}
+
+.list_x {
+  display: flex;
+}
+
+.list_x > *:not(:last-child) {
+  margin-right: var(--mar);
+}
+
+:root {
+  --mar: 8px;
+}

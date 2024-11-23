@@ -1,0 +1,44 @@
+@import url('./utils/color.css');
+@import url('./utils/container.css');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  line-height: 100%;
+
+  &::selection {
+    background-color: var(--selection-bg);
+  }
+}
+
+html,
+body,
+#root {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+img {
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  html * {
+    cursor: none !important;
+  }
+}

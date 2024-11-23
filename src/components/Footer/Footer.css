@@ -1,0 +1,11 @@
+@import url('../../style/utils/display.css');
+
+.footer {
+  height: 80px;
+}
+
+.footer_text {
+  font-size: 0.9em;
+  color: var(--text-opa-color);
+  letter-spacing: 0.5px;
+}
