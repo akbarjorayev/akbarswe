@@ -11,6 +11,12 @@
   --text-opa-color: #00000080;
 }
 
+/* input */
+:root {
+  --input-bd-color: #666666;
+}
+
+/* btn */
 :root {
   --btn-hover-bg-color: #d9dbf3;
   --btn-border-color: #2e2a8c;
@@ -18,6 +24,7 @@
   --btn-active-bg-color: #c0bef1;
 }
 
+/* main */
 :root {
   --main-text-color: #2e2eb2;
 }

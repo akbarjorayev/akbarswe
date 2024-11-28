@@ -1,0 +1,21 @@
+@import url('../../style/utils/link.css');
+@import url('../../style/utils/icon.css');
+@import url('../Blog/Blog.css');
+
+.blog_add_title_input {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.blog_add_file_input {
+  display: none;
+}
+
+.blog_add_delete_btn {
+  padding: 7px;
+  height: max-content;
+}
+
+.blog_add_photo_input {
+  text-align: center;
+}

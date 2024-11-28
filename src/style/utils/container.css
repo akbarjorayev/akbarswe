@@ -9,7 +9,7 @@
 
 .container.container_content {
   flex: 1;
-  height: 1px;
+  height: max-content;
 }
 
 @media (max-width: 768px) {

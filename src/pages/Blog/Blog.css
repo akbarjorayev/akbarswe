@@ -23,3 +23,13 @@
   transform: translateY(100%);
   animation: opaTo1 1s 1s ease forwards, translateYTo0 1s 1s ease forwards;
 }
+
+.blog_area {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.blog_photo {
+  max-height: 500px;
+  margin: 0 auto;
+}
