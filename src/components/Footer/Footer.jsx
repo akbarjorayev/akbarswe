@@ -8,7 +8,9 @@ export default function Footer() {
     <>
       <div className="container">
         <footer className="footer d_f_ce">
-          <div className="footer_text">© {year} akbarswe.uz</div>
+          <div className="footer_text">
+            © {year} {window.location.hostname}
+          </div>
         </footer>
       </div>
     </>

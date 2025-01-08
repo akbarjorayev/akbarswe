@@ -1,6 +1,12 @@
 @import url('../../style/utils/link.css');
 @import url('../../style/utils/list.css');
-@import url('../../style/utils/display.css');
+
+.container_header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color-opa) !important;
+  backdrop-filter: blur(10px);
+}
 
 .header {
   height: 80px;

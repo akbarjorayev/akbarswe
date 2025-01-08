@@ -17,7 +17,7 @@ export default function App() {
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/*" element={<Blog />} />
             <Route path="/aboutme" element={<Aboutme />} />
           </Routes>
         </Suspense>

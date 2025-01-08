@@ -1,15 +1,21 @@
 import Button from '../../../components/Button/Button'
 import './HomeAbout.css'
 import { socials } from './socials'
-import img from '../../../media/imgs/me.jpg'
+import { useGetUrlFromDB } from '../../../hooks/useSupabase.js'
 import { Link } from 'react-router-dom'
 
 export default function HomeAbout() {
+  const [urlData] = useGetUrlFromDB('me/me', 'dev')
+
   return (
     <>
       <div className="home_about">
         <div className="home_about_info">
-          <img src={img} alt="Akbar Jorayev" className="home_about_img" />
+          <img
+            src={urlData.url}
+            alt="Akbar Jorayev"
+            className="home_about_img"
+          />
           <div className="home_about_info_text d_f_jc_sb list_y">
             <div className="list_y">
               <div className="home_about_name">Akbar Jorayev</div>
@@ -27,7 +33,7 @@ export default function HomeAbout() {
           </div>
         </div>
         <p className="home_about_desc">
-          Hi there! I'm <b>Akbar Jorayev</b>, a 18-year-old Software Engineer
+          Hi there! I'm <b>Akbar Jorayev</b>, an 18-year-old Software Engineer
           from Uzbekistan.
         </p>
         <div className="list_x">
