@@ -25,11 +25,12 @@
 }
 
 .blog_area {
-  max-width: 700px;
+  width: min(500px, 100%);
   margin: 0 auto;
 }
 
 .blog_photo {
   max-height: 500px;
+  max-width: 100%;
   margin: 0 auto;
 }

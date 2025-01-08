@@ -1,5 +1,6 @@
 :root {
   --bg-color: #ffffff;
+  --bg-color-opa: #ffffff80;
 }
 
 :root {
@@ -9,6 +10,12 @@
 :root {
   --text-color: #111111;
   --text-opa-color: #00000080;
+}
+
+/* danger */
+:root {
+  --danger-border-color: #b22424;
+  --danger-bg-hover-color: #f3d9d9;
 }
 
 /* input */

@@ -14,8 +14,18 @@
 .blog_add_delete_btn {
   padding: 7px;
   height: max-content;
+  border-color: var(--danger-border-color);
+
+  &:hover {
+    background-color: var(--danger-bg-hover-color);
+  }
 }
 
 .blog_add_photo_input {
   text-align: center;
+}
+
+.blog_add_chmod_btns button.active {
+  background-color: var(--btn-border-color);
+  color: #ffffff;
 }

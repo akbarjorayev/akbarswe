@@ -1,51 +1,48 @@
-import { useRef, useState } from 'react'
-import Input from '../../components/Input/Input/Input'
-import Textarea from '../../components/Input/Textarea/Textarea'
-import Button from '../../components/Button/Button'
-import BlogAddPhoto from './BlogAddPhoto/BlogAddPhoto'
-import BloadAddTextarea from './BloadAddTextarea/BloadAddTextarea'
-import { getPhoto } from '../../scripts/photo/getPhoto'
-import { compressPhoto } from '../../scripts/photo/compressor'
+import { useState } from 'react'
+import BlogSecure from './BlogSecure/BlogSecure'
+import BlogAddChmod from './BlogAddChmod/BlogAddChmod'
+import BlogAddEdit from './BlogAddEdit/BlogAddEdit'
+import BlogAddPreview from './BlogAddPreview/BlogAddPreview'
+import { BlogAddContext } from './BlogAddContext'
 import './BlogAdd.css'
 
 export default function BlogAdd() {
-  const photo_input = useRef()
+  const [secure, setSecure] = useState(false)
+  const [title, setTitle] = useState('')
+  const [texts, setTexts] = useState([{ value: '', deleted: false }])
   const [photos, setPhotos] = useState([])
-
-  async function handlePhoto(e) {
-    let photo = await getPhoto(e.target.files[0])
-    photo = await compressPhoto(photo)
-    setPhotos(photos.concat(photo))
-    e.target.value = ''
-  }
+  const [blog, setBlog] = useState({})
+  const [chmodBtnStatus, setChmodBtnStatus] = useState('edit')
 
   return (
     <>
-      <div className="container container_content">
-        <div className="blog_area list_y">
-          <Input className="blog_add_title_input" placeholder="Title" />
-          <Textarea placeholder="Blog here" />
-          {photos.map((photo, i) => {
-            return (
-              <div className="list_y" key={i}>
-                <BlogAddPhoto imgSrc={photo} />
-                <BloadAddTextarea />
+      <BlogAddContext.Provider
+        value={{
+          title,
+          setTitle,
+          texts,
+          setTexts,
+          photos,
+          setPhotos,
+          chmodBtnStatus,
+          setChmodBtnStatus,
+          blog,
+          setBlog,
+        }}
+      >
+        <div className="container container_content">
+          {!secure && <BlogSecure setSecure={setSecure} />}
+          {secure && (
+            <>
+              <BlogAddChmod />
+              <div className="blog_area list_y">
+                {chmodBtnStatus === 'edit' && <BlogAddEdit />}
+                {chmodBtnStatus === 'view' && <BlogAddPreview />}
               </div>
-            )
-          })}
-          <Button onClick={() => photo_input.current.click()}>
-            <span>New Photo</span>
-            <input
-              ref={photo_input}
-              className="blog_add_file_input"
-              type="file"
-              accept="image/*"
-              onChange={handlePhoto}
-            />
-          </Button>
-          <Button>Publish</Button>
+            </>
+          )}
         </div>
-      </div>
+      </BlogAddContext.Provider>
     </>
   )
 }

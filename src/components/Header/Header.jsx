@@ -4,7 +4,7 @@ import './Header.css'
 export default function Header() {
   return (
     <>
-      <div className="container">
+      <div className="container container_header">
         <header className="header d_f_ai_ce">
           <div className="header_content d_f_jc_sb">
             <div className="logo">
