@@ -33,7 +33,7 @@ export default function HomeAbout() {
           </div>
         </div>
         <p className="home_about_desc">
-          Hi there! I'm <b>Akbar Jorayev</b>, a 18-year-old Software Engineer
+          Hi there! I'm <b>Akbar Jorayev</b>, an 18-year-old Software Engineer
           from Uzbekistan.
         </p>
         <div className="list_x">
