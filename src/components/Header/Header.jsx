@@ -10,7 +10,8 @@ export default function Header() {
             <div className="logo">
               <Link to="/">Akbar's Blog</Link>
             </div>
-            <div className="header_links">
+            <div className="header_links list_x">
+              <Link to="/cv">CV</Link>
               <Link to="/blog">Blog</Link>
             </div>
           </div>

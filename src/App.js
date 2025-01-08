@@ -6,6 +6,7 @@ import Loading from './pages/Loading/Loading'
 import './style/App.css'
 
 const Home = React.lazy(() => import('./pages/Home/Home'))
+const CV = React.lazy(() => import('./pages/CV/CV'))
 const Blog = React.lazy(() => import('./pages/Blog/Blog'))
 const Aboutme = React.lazy(() => import('./pages/Aboutme/Aboutme'))
 
@@ -17,6 +18,7 @@ export default function App() {
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/cv" element={<CV />} />
             <Route path="/blog/*" element={<Blog />} />
             <Route path="/aboutme" element={<Aboutme />} />
           </Routes>
