@@ -23,7 +23,9 @@ export async function publishBlog(title, texts, photos) {
     }
   }
 
-  const publishData = { title, blog }
+  const published = new Date().getTime()
+  const publishData = { title, blog, published }
+
   await saveToFirestore(`blog/${slug(title)}`, publishData)
 }
 
