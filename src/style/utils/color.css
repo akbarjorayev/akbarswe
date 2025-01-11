@@ -31,6 +31,22 @@
   --btn-active-bg-color: #c0bef1;
 }
 
+/* hr */
+:root {
+  --hr-color: #666666;
+}
+
+/* a */
+:root {
+  --link-color: #3b3bc4;
+}
+
+/* blog item */
+:root {
+  --blog-item-bd-color: #777777;
+  --blog-item-bd-opa-color: #a3a3a3;
+}
+
 /* main */
 :root {
   --main-text-color: #2e2eb2;

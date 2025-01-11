@@ -1,10 +1,10 @@
 import { useContext, useRef } from 'react'
-import Button from '../../../components/Button/Button'
-import Input from '../../../components/Input/Input/Input'
+import Button from '../../../../components/Button/Button'
+import Input from '../../../../components/Input/Input/Input'
 import { BlogAddContext } from '../BlogAddContext'
 import { blogAddInsertIntoArray } from '../utils/blogAddInsertIntoArray'
 import { blogAddDelete } from '../utils/blogAddDelete'
-import deleteIcon from '../../../media/icons/delete.svg'
+import deleteIcon from '../../../../media/icons/delete.svg'
 
 export default function BlogAddPhoto({ i }) {
   const item = useRef()

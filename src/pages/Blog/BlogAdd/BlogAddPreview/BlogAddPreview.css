@@ -1,0 +1,14 @@
+@import url('../../../../style/utils/line.css');
+
+.blog_add_preview_item a {
+  color: var(--link-color);
+}
+
+.blog_add_preview_published {
+  color: var(--text-opa-color);
+  font-size: 0.9em;
+}
+
+.blog_add_preview_hr {
+  margin-bottom: 40px !important;
+}

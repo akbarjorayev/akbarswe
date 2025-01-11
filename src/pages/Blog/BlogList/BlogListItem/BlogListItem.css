@@ -1,0 +1,16 @@
+.blog_list_item {
+  user-select: none;
+  cursor: pointer;
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--blog-item-bd-opa-color);
+
+  &:hover {
+    border-color: var(--btn-hover-bd-color);
+  }
+}
+
+.blog_list_item_published {
+  color: var(--text-opa-color);
+  font-size: 0.9em;
+}

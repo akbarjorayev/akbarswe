@@ -1,0 +1,19 @@
+@import url('../../../style/utils/line.css');
+
+.blog_show_title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.blog_show_published {
+  color: var(--text-opa-color);
+  font-size: 0.9em;
+}
+
+.blog_show_area hr {
+  margin-bottom: 40px !important;
+}
+
+.blog_show_area a {
+  color: var(--link-color);
+}

@@ -1,0 +1,5 @@
+@import url('../../../style/utils/animations.css');
+
+.blog_list_loading {
+  height: 100%;
+}
