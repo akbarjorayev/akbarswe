@@ -4,7 +4,7 @@ import Button from '../../../../components/Button/Button'
 import { BlogAddContext } from '../BlogAddContext'
 import { blogAddDelete } from '../utils/blogAddDelete'
 import { blogAddInsertIntoArray } from '../utils/blogAddInsertIntoArray'
-import deleteIcon from '../../../../media/icons/delete.svg'
+import { ReactComponent as DeleteIcon } from '../../../../media/icons/delete.svg'
 
 export default function BloadAddTextarea({ i }) {
   const item = useRef()
@@ -36,7 +36,7 @@ export default function BloadAddTextarea({ i }) {
             )
           }
         >
-          <img className="icon" src={deleteIcon} alt="delete" />
+          <DeleteIcon className="icon" />
         </Button>
       </div>
     </>

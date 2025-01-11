@@ -1,3 +1,4 @@
+import React from 'react'
 import Button from '../../../components/Button/Button'
 import './HomeAbout.css'
 import { socials } from './socials'
@@ -25,7 +26,9 @@ export default function HomeAbout() {
               {socials.map((social, _) => {
                 return (
                   <Link key={_} to={social.link}>
-                    <img src={social.icon} alt={social.alt} />
+                    {React.cloneElement(social.icon, {
+                      className: 'icon',
+                    })}
                   </Link>
                 )
               })}
