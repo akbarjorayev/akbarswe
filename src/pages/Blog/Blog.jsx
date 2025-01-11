@@ -1,21 +1,20 @@
-import React, { useRef } from 'react'
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import './Blog.css'
 
-const BlogAdd = React.lazy(() => import('../BlogAdd/BlogAdd'))
+const BlogList = React.lazy(() => import('./BlogList/BlogList'))
+const BlogAdd = React.lazy(() => import('./BlogAdd/BlogAdd'))
+const BlogShow = React.lazy(() => import('./BlogShow/BlogShow'))
 
 export default function Blog() {
-  const url = useRef(window.location.pathname.split('blog/')[1]).current
-
   return (
     <>
       <div className="container container_content">
-        {url === 'add' && <BlogAdd />}
-        {url !== 'add' && (
-          <div className="blog_coming_soon_title">
-            <div className="blog_title">Blog</div>
-            <div className="blog_coming_soon">Coming soon</div>
-          </div>
-        )}
+        <Routes>
+          <Route path="/" element={<BlogList />} />
+          <Route path="add" element={<BlogAdd />} />
+          <Route path="b/*" element={<BlogShow />} />
+        </Routes>
       </div>
     </>
   )

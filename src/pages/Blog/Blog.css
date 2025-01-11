@@ -1,30 +1,5 @@
-@import url('../../style/utils/animations.css');
-
-.blog_coming_soon_title {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.blog_title {
-  font-size: 4em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-.blog_coming_soon {
-  font-size: 2em;
-  letter-spacing: 1px;
-  color: var(--text-opa-color);
-  opacity: 0;
-  transform: translateY(100%);
-  animation: opaTo1 1s 1s ease forwards, translateYTo0 1s 1s ease forwards;
-}
-
 .blog_area {
+  height: 100%;
   width: min(500px, 100%);
   margin: 0 auto;
 }
@@ -33,4 +8,13 @@
   max-height: 500px;
   max-width: 100%;
   margin: 0 auto;
+  border-radius: 10px;
+}
+
+.blog_link {
+  color: var(--link-color);
+}
+
+pre {
+  text-wrap: auto;
 }

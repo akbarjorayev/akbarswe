@@ -1,0 +1,21 @@
+@import url('../../../style/utils/animations.css');
+
+.blog_coming_soon_title_area {
+  height: 100%;
+}
+
+.blog_coming_soon_title {
+  font-size: 4em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.blog_coming_soon_subtitle {
+  font-size: 2em;
+  letter-spacing: 1px;
+  color: var(--text-opa-color);
+  opacity: 0;
+  transform: translateY(100%);
+  animation: opaTo1 1s 1s ease forwards, translateYTo0 1s 1s ease forwards;
+}

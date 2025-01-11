@@ -37,7 +37,7 @@ export default function HomeAbout() {
           from Uzbekistan.
         </p>
         <div className="list_x">
-          <Link to="/aboutme">
+          <Link to="/about-me">
             <Button className="home_about_about_btn">About me</Button>
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import { useContext, useRef } from 'react'
-import Button from '../../../components/Button/Button'
+import Button from '../../../../components/Button/Button'
 import { BlogAddContext } from '../BlogAddContext'
 
 export default function BlogAddChmod() {

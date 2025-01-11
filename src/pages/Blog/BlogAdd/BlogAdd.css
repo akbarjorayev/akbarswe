@@ -1,6 +1,6 @@
-@import url('../../style/utils/link.css');
-@import url('../../style/utils/icon.css');
-@import url('../Blog/Blog.css');
+@import url('../../../style/utils/link.css');
+@import url('../../../style/utils/icon.css');
+@import url('../Blog.css');
 
 .blog_add_title_input {
   font-size: 2em;

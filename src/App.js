@@ -20,7 +20,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/cv" element={<CV />} />
             <Route path="/blog/*" element={<Blog />} />
-            <Route path="/aboutme" element={<Aboutme />} />
+            <Route path="/about-me" element={<Aboutme />} />
           </Routes>
         </Suspense>
         <Footer />

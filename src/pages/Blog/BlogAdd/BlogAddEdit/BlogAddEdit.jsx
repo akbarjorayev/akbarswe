@@ -1,12 +1,12 @@
 import { useContext, useRef } from 'react'
-import Button from '../../../components/Button/Button'
-import Input from '../../../components/Input/Input/Input'
-import Textarea from '../../../components/Input/Textarea/Textarea'
+import Button from '../../../../components/Button/Button'
+import Input from '../../../../components/Input/Input/Input'
+import Textarea from '../../../../components/Input/Textarea/Textarea'
 import BlogAddPhoto from '../BlogAddPhoto/BlogAddPhoto'
 import BloadAddTextarea from '../BloadAddTextarea/BloadAddTextarea'
 import { BlogAddContext } from '../BlogAddContext'
-import { getPhoto } from '../../../scripts/photo/getPhoto'
-import { compressPhoto } from '../../../scripts/photo/compressor'
+import { getPhoto } from '../../../../scripts/photo/getPhoto'
+import { compressPhoto } from '../../../../scripts/photo/compressor'
 import { blogAddInsertIntoArray } from '../utils/blogAddInsertIntoArray'
 
 export default function BlogAddEdit() {
