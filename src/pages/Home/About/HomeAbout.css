@@ -46,7 +46,8 @@
     translateYTo0 0.5s 0.5s ease forwards;
 }
 
-.home_about_icons img {
+.home_about_icons .icon {
+  width: 25px;
   height: 25px;
   aspect-ratio: 1;
 }

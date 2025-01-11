@@ -4,7 +4,7 @@ import Input from '../../../../components/Input/Input/Input'
 import { BlogAddContext } from '../BlogAddContext'
 import { blogAddInsertIntoArray } from '../utils/blogAddInsertIntoArray'
 import { blogAddDelete } from '../utils/blogAddDelete'
-import deleteIcon from '../../../../media/icons/delete.svg'
+import { ReactComponent as DeleteIcon } from '../../../../media/icons/delete.svg'
 
 export default function BlogAddPhoto({ i }) {
   const item = useRef()
@@ -26,7 +26,7 @@ export default function BlogAddPhoto({ i }) {
             )
           }
         >
-          <img className="icon" src={deleteIcon} alt="delete" />
+          <DeleteIcon className="icon" />
         </Button>
         <Input
           className="blog_add_photo_input"

@@ -1,53 +1,56 @@
 :root {
-  --bg-color: #ffffff;
-  --bg-color-opa: #ffffff80;
+  color-scheme: light dark;
 }
 
 :root {
-  --selection-bg: #00000033;
+  --bg-color: light-dark(#ffffff, #222222);
+  --bg-opa-color: light-dark(#ffffff80, #22222280);
 }
 
 :root {
-  --text-color: #111111;
-  --text-opa-color: #00000080;
+  --selection-bg-color: light-dark(#00000033, #ffffff33);
+}
+
+:root {
+  --text-color: light-dark(#111111, #eeeeee);
+  --text-opa-color: light-dark(#00000080, #ffffff80);
 }
 
 /* danger */
 :root {
-  --danger-border-color: #b22424;
-  --danger-bg-hover-color: #f3d9d9;
+  --danger-border-color: light-dark(#b22424, #ff7070);
+  --danger-bg-hover-color: light-dark(#f3d9d9, #4a1a1a);
 }
 
-/* input */
 :root {
-  --input-bd-color: #666666;
+  --input-bd-color: light-dark(#666666, #cccccc);
 }
 
 /* btn */
 :root {
-  --btn-hover-bg-color: #d9dbf3;
-  --btn-border-color: #2e2a8c;
-  --btn-active-border-color: #2545c5;
-  --btn-active-bg-color: #c0bef1;
+  --btn-hover-bg-color: light-dark(#d9dbf3, #2e2a8c);
+  --btn-border-color: light-dark(#2e2a8c, #6e7ded);
+  --btn-active-border-color: light-dark(#2545c5, #8faeff);
+  --btn-active-bg-color: light-dark(#c0bef1, #1c235a);
 }
 
 /* hr */
 :root {
-  --hr-color: #666666;
+  --hr-color: light-dark(#666666, #cccccc);
 }
 
 /* a */
 :root {
-  --link-color: #3b3bc4;
+  --link-color: light-dark(#3b3bc4, #6565e2);
 }
 
 /* blog item */
 :root {
-  --blog-item-bd-color: #777777;
-  --blog-item-bd-opa-color: #a3a3a3;
+  --blog-item-bd-color: light-dark(#777777, #bbbbbb);
+  --blog-item-bd-opa-color: light-dark(#a3a3a3, #646464);
 }
 
 /* main */
 :root {
-  --main-text-color: #2e2eb2;
+  --main-text-color: light-dark(#2e2a8c, #6e7ded);
 }
