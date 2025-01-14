@@ -24,9 +24,12 @@ export async function publishBlog(title, texts, photos) {
   }
 
   const published = new Date().getTime()
-  const publishData = { title, blog, published }
+  const publishData = { title, published }
 
-  await saveToFirestore(`blog/${slug(title)}`, publishData)
+  const slug_title = slug(title)
+
+  await saveToFirestore(`blog/${slug_title}`, publishData)
+  await saveToFirestore(`blog/${slug_title}/blog/blog`, { blog: blog })
 }
 
 async function photoURL(title, photo, i) {

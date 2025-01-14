@@ -2,20 +2,14 @@ import { doc, getDoc, getDocs, setDoc, collection } from 'firebase/firestore'
 import { firebaseFirestore } from './firebase.init'
 
 export async function saveToFirestore(path, data) {
-  const pathCollection = path.split('/')[0]
-  const pathDocument = path.split('/')[1]
-
-  const docRef = doc(firebaseFirestore, pathCollection, pathDocument)
+  const docRef = doc(firebaseFirestore, path)
   await setDoc(docRef, data)
 
   return 'saved'
 }
 
 export async function loadFromFirestore(path) {
-  const pathCollection = path.split('/')[0]
-  const pathDocument = path.split('/')[1]
-
-  const docRef = doc(firebaseFirestore, pathCollection, pathDocument)
+  const docRef = doc(firebaseFirestore, path)
   const docSnap = await getDoc(docRef)
 
   if (docSnap.exists()) return docSnap.data()
