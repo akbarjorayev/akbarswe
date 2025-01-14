@@ -6,6 +6,7 @@
   top: 0;
   background-color: var(--bg-opa-color) !important;
   backdrop-filter: blur(10px);
+  z-index: 1;
 }
 
 .header {
