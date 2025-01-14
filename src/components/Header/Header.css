@@ -4,9 +4,13 @@
 .container_header {
   position: sticky;
   top: 0;
-  background-color: var(--bg-opa-color) !important;
+  background-color: var(--bg-opa-color);
   backdrop-filter: blur(10px);
   z-index: 1;
+}
+
+.container_header > .container {
+  background-color: transparent;
 }
 
 .header {

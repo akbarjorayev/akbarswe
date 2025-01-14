@@ -1,0 +1,35 @@
+@import url('../../../style/utils/animations.css');
+
+.project_area {
+  height: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+.project_img {
+  height: min(300px, 50%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  scale: 0.7;
+  opacity: 0;
+  filter: blur(10px);
+  animation: scaleTo1 0.5s forwards, opaTo1 0.5s forwards,
+    filterBlurTo0 0.5s forwards;
+}
+
+.project_name {
+  font-size: 2em;
+  opacity: 0;
+  animation: opaTo1 1s 0.2s forwards;
+}
+
+.project_btn {
+  min-width: min(350px, 100%);
+  opacity: 0;
+  transform: translateY(100%);
+  animation: opaTo1 0.5s 0.5s forwards, translateYTo0 0.5s 0.5s forwards;
+
+  & > button {
+    width: 100%;
+  }
+}
