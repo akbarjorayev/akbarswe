@@ -3,8 +3,8 @@ import ReactMarkdown from 'react-markdown'
 import Button from '../../../../components/Button/Button'
 import { BlogAddContext } from '../BlogAddContext'
 import { publishBlog } from '../../../../module/blog/publish'
-import './BlogAddPreview.css'
 import { formatDate } from '../../../../scripts/format/date'
+import './BlogAddPreview.css'
 
 export default function BlogAddPreview() {
   const { title, texts, photos } = useContext(BlogAddContext)
