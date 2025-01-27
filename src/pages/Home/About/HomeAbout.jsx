@@ -1,9 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Button from '../../../components/Button/Button'
-import './HomeAbout.css'
 import { socials } from './socials'
 import { useGetUrlFromDB } from '../../../hooks/useSupabase.js'
-import { Link } from 'react-router-dom'
+import './HomeAbout.css'
 
 export default function HomeAbout() {
   const [urlData] = useGetUrlFromDB('me/me', 'dev')
@@ -16,6 +16,7 @@ export default function HomeAbout() {
             src={urlData.url}
             alt="Akbar Jorayev"
             className="home_about_img"
+            loading="lazy"
           />
           <div className="home_about_info_text d_f_jc_sb list_y">
             <div className="list_y">
@@ -25,7 +26,7 @@ export default function HomeAbout() {
             <div className="list_x home_about_icons">
               {socials.map((social, _) => {
                 return (
-                  <Link key={_} to={social.link}>
+                  <Link key={_} to={social.link} aria-label={social.alt}>
                     {React.cloneElement(social.icon, {
                       className: 'icon',
                     })}

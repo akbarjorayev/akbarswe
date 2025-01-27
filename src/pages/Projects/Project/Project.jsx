@@ -10,6 +10,7 @@ export default function Project({ project }) {
           src={project?.img.link}
           alt={project?.img.alt}
           className="project_img"
+          loading="lazy"
         />
         <b className="project_name">{project?.name}</b>
         <Link to={project?.link} className="project_btn">
