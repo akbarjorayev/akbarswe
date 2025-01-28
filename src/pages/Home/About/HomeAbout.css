@@ -11,16 +11,34 @@
   display: flex;
 }
 
+.home_about_img_con,
 .home_about_img {
   height: 130px;
   aspect-ratio: 1;
   border-radius: 50%;
   margin-right: 20px;
+  position: relative;
+}
+
+.home_about_img_con .loading_spinner_con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home_about_img.hidden {
   scale: 0.7;
   opacity: 0;
   filter: blur(10px);
-  animation: scaleTo1 0.5s ease forwards, opaTo1 0.5s ease forwards,
-    filterBlurTo0 0.5s ease forwards;
+}
+
+.home_about_img {
+  margin: 0;
+  scale: 1;
+  opacity: 1;
+  filter: blur(0px);
+  transition: scale 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
 }
 
 .home_about_info_text {
@@ -47,9 +65,14 @@
 }
 
 .home_about_icons .icon {
-  width: 25px;
+  min-width: 25px;
   height: 25px;
-  aspect-ratio: 1;
+  scale: 0.5;
+  opacity: 0;
+  filter: blur(5px);
+  animation: scaleTo1 0.3s ease forwards, opaTo1 0.3s ease forwards,
+    filterBlurTo0 0.2s ease forwards;
+  animation-delay: var(--home-about-icon-delay, 0s);
 }
 
 .home_about_about_btn {
@@ -71,4 +94,8 @@
     margin-right: 0;
     margin-bottom: 20px;
   }
+}
+
+:root {
+  --home-about-icon-delay: 0s;
 }
